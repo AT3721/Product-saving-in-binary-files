@@ -94,7 +94,7 @@ public class Main {
                             break;
                         }
                     }
-                    if (!isDeleted) {
+                    if (isDeleted) {
                         writeDataToFile(path, products);
                         System.out.println("Deleted successfully!");
                     } else {
@@ -108,7 +108,7 @@ public class Main {
         }
     }
 
-
+    @SuppressWarnings("unchecked")
     public static List<Product> readDataFromFile(String path) {
         List<Product> products = new ArrayList<>();
 
